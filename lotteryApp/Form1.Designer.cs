@@ -70,6 +70,9 @@
             this.lblNines_count2 = new System.Windows.Forms.Label();
             this.lblNines_count3 = new System.Windows.Forms.Label();
             this.btnReset = new System.Windows.Forms.Button();
+            this.lblNumberAverage = new System.Windows.Forms.Label();
+            this.lblAverageR2 = new System.Windows.Forms.Label();
+            this.lblAverageR3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblPick3
@@ -684,12 +687,54 @@
             this.btnReset.Visible = false;
             this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
+            // lblNumberAverage
+            // 
+            this.lblNumberAverage.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblNumberAverage.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblNumberAverage.Font = new System.Drawing.Font("Informal Roman", 14F);
+            this.lblNumberAverage.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.lblNumberAverage.Location = new System.Drawing.Point(659, 36);
+            this.lblNumberAverage.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNumberAverage.Name = "lblNumberAverage";
+            this.lblNumberAverage.Size = new System.Drawing.Size(208, 44);
+            this.lblNumberAverage.TabIndex = 45;
+            this.lblNumberAverage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblAverageR2
+            // 
+            this.lblAverageR2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblAverageR2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblAverageR2.Font = new System.Drawing.Font("Informal Roman", 14F);
+            this.lblAverageR2.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.lblAverageR2.Location = new System.Drawing.Point(659, 92);
+            this.lblAverageR2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblAverageR2.Name = "lblAverageR2";
+            this.lblAverageR2.Size = new System.Drawing.Size(208, 44);
+            this.lblAverageR2.TabIndex = 46;
+            this.lblAverageR2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblAverageR3
+            // 
+            this.lblAverageR3.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblAverageR3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblAverageR3.Font = new System.Drawing.Font("Informal Roman", 14F);
+            this.lblAverageR3.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.lblAverageR3.Location = new System.Drawing.Point(659, 153);
+            this.lblAverageR3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblAverageR3.Name = "lblAverageR3";
+            this.lblAverageR3.Size = new System.Drawing.Size(208, 44);
+            this.lblAverageR3.TabIndex = 47;
+            this.lblAverageR3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Lottery_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.ClientSize = new System.Drawing.Size(684, 776);
+            this.ClientSize = new System.Drawing.Size(880, 784);
+            this.Controls.Add(this.lblAverageR3);
+            this.Controls.Add(this.lblAverageR2);
+            this.Controls.Add(this.lblNumberAverage);
             this.Controls.Add(this.btnReset);
             this.Controls.Add(this.lblNines_count3);
             this.Controls.Add(this.lblNines_count2);
@@ -787,6 +832,9 @@
         private System.Windows.Forms.Label lblNines_count2;
         private System.Windows.Forms.Label lblNines_count3;
         private System.Windows.Forms.Button btnReset;
+        private System.Windows.Forms.Label lblNumberAverage;
+        private System.Windows.Forms.Label lblAverageR2;
+        private System.Windows.Forms.Label lblAverageR3;
     }
 }
 

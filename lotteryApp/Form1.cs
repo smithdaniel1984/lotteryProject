@@ -66,8 +66,11 @@ namespace lotteryApp
 
         private void btnDisplayPick3_Click(object sender, EventArgs e)
         {
+            //Itnialize varibles
             Random random = new Random();
-           
+            List<int> numbersList = new List<int>();
+            double average = 0.0;
+
             //varibles for random numbers
             int number1 = random.Next(0, 10);
             int number2 = random.Next(0, 10);
@@ -135,6 +138,54 @@ namespace lotteryApp
             click_counter(click_count);
 
             click_count++;
+
+            //Add all the numbers to a list
+            for (int i = 0; i <= 3 - 1; i++)
+            {
+                //ititialize varibles 
+                double numbers = 0;
+                double numbers1 = 0;
+                double numbers2 = 0;
+                double numCount = click_count - 1;
+               
+                //add frist row of numbers to the list
+                numbersList.Add(number1);
+                numbersList.Add(number2);
+                numbersList.Add(number3);
+
+                //add second row of numbers to the list
+                numbersList.Add(number4);
+                numbersList.Add(number5);
+                numbersList.Add(number6);
+
+                //add thrid row of numbers to the list
+                numbersList.Add(number7);
+                numbersList.Add(number8);
+                numbersList.Add(number9);
+
+                //add the row of numbers together
+                numbers = numbers + number1 + number2 + number3;
+
+                //add the row of numbers together (row2)
+                numbers1 = numbers1 + number4 + number5 + number6;
+
+                //add the row of numbers together (row2)
+                numbers2 = numbers2 + number7 + number8 + number9;
+
+                //multiply the count of clicks to the numbers for the average
+                numCount = numCount * 3;
+
+                //get the average of the rows
+                average = numbers / numCount;
+                double average1 = numbers1 / numCount;
+                double average2 = numbers2 / numCount;
+
+                //display the average to the lable
+                lblNumberAverage.Text = Convert.ToString(average);
+                lblAverageR2.Text = Convert.ToString(average1);
+                lblAverageR3.Text = Convert.ToString(average2);
+            }
+                       
         }
 
         public void click_counter(int click_count)
@@ -147,7 +198,7 @@ namespace lotteryApp
             }
           
         }
-
+               
         public void zeros_count(int lable1, int lable2, int lable3, int lable4, int lable5, int lable6, int lable7, int lable8, int lable9)
         {
             //if statement to count the number of zeros in the first row
@@ -421,6 +472,7 @@ namespace lotteryApp
         public void btnReset_Click(object sender, EventArgs e)
         {
             btnDisplayPick3.Visible = true;
+            btnReset.Visible = false;
         }
     }
 }
